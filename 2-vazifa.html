@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>2-vazifa</title>
+</head>
+
+<body>
+     <div id="container">
+          <p id="oldElement">Bu eski paragraf.</p>
+     </div>
+     <button onclick="replaceElement()">Almashtirish</button>
+     <script>
+          function replaceElement() {
+               let newParagraph = document.createElement("p");
+               let text = document.createTextNode("Bu yangi paragraf");
+               newParagraph.appendChild(text);
+
+               let container = document.getElementById("container");
+               let oldElement = document.getElementById("oldElement");
+               container.replaceChild(newParagraph, oldElement);
+          }
+     </script>
+</body>
+
+</html>

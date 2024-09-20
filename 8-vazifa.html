@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>8-vazifa</title>
+</head>
+<body>
+     <p class="replaceable">Bu oldingi paragrafelementi</p>
+     <button onclick="replace()">Almashtirish</button>
+     <script>
+       function replace() {
+             let newElement = document.createElement("div");
+               let text = document.createTextNode("Bu yangi div element");
+               let body = document.querySelector("body");
+                    newElement.appendChild(text);
+               let oldElement = document.querySelector('.replaceable');
+             body.replaceChild(newElement, oldElement);
+         }
+     </script>
+</body>
+</html>
